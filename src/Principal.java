@@ -3,6 +3,7 @@ public class Principal {
     public static void main(String[] args){
         // Estructura no dinamica
         int[] arreglo = new int[7];
+        int index = 0;
 
         arreglo[0] = 20;
         arreglo[1] = 35;
@@ -12,7 +13,15 @@ public class Principal {
         arreglo[5] = 23;
         arreglo[6] = 232;
 
-        for(int x = 0; x < arreglo.length; x++)
-            System.out.println(arreglo[x]);
+        for(int x = 0; x < arreglo.length; x++) {
+            //System.out.println(arreglo[x]);
+            if(arreglo[x] == 7){
+                index = x;
+                break;
+            }
+        }
+
+        System.out.println("Indice = " + index);
+
     }
 }
